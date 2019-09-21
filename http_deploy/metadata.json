@@ -1,0 +1,29 @@
+{
+  "name": "http_deploy",
+  "description": "Downloads and deploys a binary package using HTTP",
+  "long_description": "http_deploy Cookbook\n====================\nThis cookbook downloads and deploys a binary package using HTTP.\n\nResource/Provider\n-----------------\n### http_deploy\n#### Actions\n- :deploy: Download and deploy a binary package using HTTP\n\n#### Attribute Parameters\n- :url: URL of the file to be deployed\n- :path: The directory to deploy the file into\n- :builds: The directory to store the download in (defaults to `Chef::Client[:file_cache_path]` if it's defined otherwise it falls back to the OS tmpdir)\n\n#### Examples\nDeploy a WAR file into a tomcat instance\n\n```ruby\nhttp_deploy 'app.war' do\n  url 'http://some-bucket.s3.amazonaws.com/builds/app_production.war'\n  path node[:tomcat][:webapp_dir]\nend\n```\n\nUsage\n-----\n#### <cookbook>/metadata.rb:\n```ruby\ndepends 'http_deploy'\n```\n\nContributing\n------------\n1. Fork the repository on Github\n2. Create a named feature branch (like `add_component_x`)\n3. Write your change\n4. Write tests for your change (if applicable)\n5. Run the tests, ensuring they all pass\n6. Submit a Pull Request using Github\n\nLicense & Authors\n-----------------\n- Author:: Matt Kasa (<mattk@granicus.com>)\n\n```text\nCopyright 2014, Granicus Inc.\n\nThis file is part of http_deploy.\n\nhttp_deploy is free software: you can redistribute it and/or modify\nit under the terms of the GNU Affero General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.\n\nhttp_deploy is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\nGNU Affero General Public License for more details.\n\nYou should have received a copy of the GNU Affero General Public License\nalong with http_deploy.  If not, see <http://www.gnu.org/licenses/>.\n```\n",
+  "maintainer": "Granicus Inc.",
+  "maintainer_email": "Matt Kasa <mattk@granicus.com>",
+  "license": "agplv3",
+  "platforms": {
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.0.2"
+}
